@@ -1,0 +1,16 @@
+{
+  "name": "arteegee",
+  "version": "0.1.0",
+  "description": "Connect Four over WebRTC",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Mahmud Ridwan <m@hjr265.me>",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "peer": "^0.2.8"
+  }
+}

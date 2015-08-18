@@ -1,0 +1,47 @@
+doctype html
+html(lang='en')
+	head
+		title Connect Four over WebRTC
+		meta(name='viewport' content='width=640px, initial-scale=1')
+
+		block styles
+			link(rel='stylesheet' href='//fonts.googleapis.com/css?family=Gloria+Hallelujah|Alef')
+			link(rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css')
+			link(rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css')
+			link(rel='stylesheet' href='/assets/css/screen.css')
+	body
+		section#menu
+			div.animated.bounceIn
+				div
+					h1 Connect Four
+					br
+					div.no-support(style='display: none;')
+						div.alert.alert-warning
+							p Unfortunately, your web browser does not <a href="http://iswebrtcreadyyet.com">support WebRTC</a>
+					div
+						a.btn.btn-primary.btn-lg(href='#start') Start
+						| &nbsp;
+						a.btn.btn-default.btn-lg(href='#join') Join
+
+		section#game(style='display: none;')
+			div
+				div
+					h1 Connect Four
+					br
+					table.table.grid
+						tbody
+							for i in [0, 1, 2, 3, 4, 5]
+								tr
+									for j in [0, 1, 2, 3, 4, 5, 6]
+										td
+											div.slot
+					br
+					div.alert.alert-info
+						p
+
+		block scripts
+			script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js')
+			script(src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js')
+			script(src='//cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js')
+			script(src='//cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.14/peer.min.js')
+			script(src='/assets/js/arteegee.js')
